@@ -13,7 +13,7 @@ You may submit a dictionary with keywords along with their associated values. Th
 <b>keywords</b>: list of keywords<br>
 
 <br>
-Passing all three keys is not a requirement. You can choose to pass only one or two of the keys if that works better for you. This gives you the flexibility to customize your experience and pick the keys that are most important to you..
+Passing all three keys is not a requirement. You can choose to pass only one or two of the keys if that works better for you. This gives you the flexibility to customize your experience and pick the keys that are most important to you.<br><br>
 
 ```
 params = {
@@ -24,9 +24,8 @@ params = {
          
 search_pdf('c:/my_folder_with_pdf', params=params)
 ```
-
 <br>
-Using Regular Expressions style patterns, you can pass your own unique pattern to search for specific text in a PDF. : <br>
+Using Regular Expressions style patterns, you can pass your own unique pattern to search for specific text in a PDF. : <br><br>
 
 ```
 my_pattern = "(?=.*mobility).*"
