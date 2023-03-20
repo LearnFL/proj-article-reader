@@ -44,3 +44,15 @@ my_pattern = "SOME PATTERN"
 search_pdf('c:/my_folder_with_pdf', to_text="c:/some_path/my_text_file.txt", pattern=my_pattern, 
             grab_extra=25, print_on_screen=True)
 ```
+
+### Example of output:
+
+```
+Reading files, it may take a minute...
+File Name: C:\Users\..\Articles\368635591.pdf, Page: 64 of 290, crystals 
+cooled too quickly exhibit thermal strain and crack easily.26  Fast cooling of
+File Name: C:\Users\..\Articles\268634785.pdf, Page: 144 of 290, limiting the suitable crystal growth techniques.  Because of this complication as well as additional problems with thermally-induced cracking and continued problems 
+File Name: C:\Users\...\Articles\Articles\768635545.pdf, Page: 173 of 290, LiB 6O10 (CLBO) which is severely hygroscopic and tends to crack.16  A more advanced 
+study
+Total read: 47, total could not read: 1, files could not read by name: ["C:\\Users\\...\\Articles\\report356.pdf"]
+```
