@@ -6,6 +6,7 @@ from threading import Thread, Lock
 from PyPDF2 import PdfReader
 
 
+
 class CountMissing:
     def __init__(self):
         self.count_missing = 0
@@ -13,7 +14,7 @@ class CountMissing:
         self.aList = []
 
     def missing(self, file):
-        self.count.missing += 1
+        self.count_missing += 1
         self.aList.append(file)
     
     def count_pdf(self):
@@ -39,7 +40,7 @@ class InputClass:
                     for idx, page in enumerate(pages, 1):
                         yield (len(pages), idx, self.pdf_file, page)
             except:
-                yield [None, self.pdf_file]
+                yield None
 
     @classmethod
     def generate_inputs(cls, data_dir):
@@ -68,12 +69,11 @@ class PdfSearch:
                     for entry in self.report:
                         writer.write(f'{entry} \n\n')
 
-    def present_data(self, pattern):
-        if isinstance(self.input, list):
-            if self.input[0] == None:
-                with self.lock:
-                    pdf_report.missing(self.input[1])
-
+    def present_data(self, pattern):    
+        if self.input.read() == None or None in self.input.read():
+            pdf_report.missing(self.input.pdf_file)
+            return
+        
         with self.lock:
             pdf_report.count_pdf()  
 
@@ -94,7 +94,8 @@ class PdfSearch:
                         self.report.append(f'File Name: {file_name}, Page: {idx} of {pagesN}, {i.group()}')
                         if self.print_on_screen:
                             print(f'File Name: {file_name}, Page: {idx} out of {pagesN}, {i.group()}')
-        self.dump_txt()
+
+            self.dump_txt()
 
     def build_patterns(self):
         include = ''.join([f"(?=.*\\b{i}\\b.*)" for i in params.get('include', '')])
@@ -130,8 +131,7 @@ def execute(workers):
     print(pdf_report.report())
 
 
-
-    
+ 
 def search_pdf(data_dir, *, params=None, pattern=None, to_txt=None, worker_class=PdfSearch, input_class=InputClass, grab_extra=0, print_on_screen=True):
 
     if not os.path.exists(data_dir):
