@@ -66,3 +66,10 @@ Total read: 8, Found: 212, total could not read: 0, files could not read by name
 
 #### EXCEL
 <img width="660" alt="excel" src="https://user-images.githubusercontent.com/86169204/228310802-3c33cc25-2797-4cb0-be76-214a8e713f3b.PNG">
+
+### Requirements
+```
+openpyxl==3.1.1
+pandas==1.5.3
+PyPDF2==3.0.1
+```
