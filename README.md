@@ -56,7 +56,7 @@ cooled too quickly exhibit thermal strain and crack easily.26  Fast cooling of
 File Name: C:\Users\..\Articles\268634785.pdf, Page: 144 of 290, limiting the suitable crystal growth techniques.  Because of this complication as well as additional problems with thermally-induced cracking and continued problems 
 File Name: C:\Users\...\Articles\Articles\768635545.pdf, Page: 173 of 290, LiB 6O10 (CLBO) which is severely hygroscopic and tends to crack.16  A more advanced 
 study
-Total read: 8, Found: 212, total could not read: 0, files could not read by name: ["C:\\Users\\...\\Articles\\report356.pdf"]
+Total read: 8, Found: 212, total could not read: 1, files could not read by name: ["C:\\Users\\...\\Articles\\report356.pdf"]
 ```
 #### Text file
 <img width="308" alt="text" src="https://user-images.githubusercontent.com/86169204/228311462-09697381-84cb-448a-9b38-97e635d469d3.PNG">
