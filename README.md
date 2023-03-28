@@ -34,7 +34,9 @@ search_pdf('c:/my_folder_with_pdf', pattern=my_pattern)
 ```
 
 ### Optional parameters
-<b>to_text</b> takes a path where you want to save a text file that contains findings including file name and page on which finding is present.<br><br>
+<b>to_txt</b> takes a path where you want to save a text file that contains findings including file name and page on which finding is present.<br><br>
+<b>to_csv</b> takes a path where you want to save a csv file that contains findings including file name and page on which finding is present.<br><br>
+<b>to_excel</b> takes a path where you want to save an excel file that contains findings including file name and page on which finding is present.<br><br>
 <b>grab_extra</b> takes a postive integer that specifies a number of charechters before and after the finding that you want to include and add to the finding.<br><br>
 <b>print_on_screen</b> the default is True, prints result in terminal, that includes file name and path, page number where the finding is present and the finding itself.<br><br>
 
@@ -46,7 +48,7 @@ search_pdf('c:/my_folder_with_pdf', to_text="c:/some_path/my_text_file.txt", pat
 ```
 
 ### Example of output:
-
+#### Screen
 ```
 Reading files, it may take a minute...
 File Name: C:\Users\..\Articles\368635591.pdf, Page: 64 of 290, crystals 
@@ -54,5 +56,13 @@ cooled too quickly exhibit thermal strain and crack easily.26  Fast cooling of
 File Name: C:\Users\..\Articles\268634785.pdf, Page: 144 of 290, limiting the suitable crystal growth techniques.  Because of this complication as well as additional problems with thermally-induced cracking and continued problems 
 File Name: C:\Users\...\Articles\Articles\768635545.pdf, Page: 173 of 290, LiB 6O10 (CLBO) which is severely hygroscopic and tends to crack.16  A more advanced 
 study
-Total read: 47, total could not read: 1, files could not read by name: ["C:\\Users\\...\\Articles\\report356.pdf"]
+Total read: 8, Found: 212, total could not read: 0, files could not read by name: ["C:\\Users\\...\\Articles\\report356.pdf"]
 ```
+#### Text file
+<img width="308" alt="text" src="https://user-images.githubusercontent.com/86169204/228311462-09697381-84cb-448a-9b38-97e635d469d3.PNG">
+
+#### CSV
+<img width="482" alt="csv" src="https://user-images.githubusercontent.com/86169204/228311173-faebc08d-c37b-4e36-be05-888980c8cb67.PNG">
+
+#### EXCEL
+<img width="660" alt="excel" src="https://user-images.githubusercontent.com/86169204/228310802-3c33cc25-2797-4cb0-be76-214a8e713f3b.PNG">
