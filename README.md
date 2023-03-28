@@ -43,7 +43,7 @@ search_pdf('c:/my_folder_with_pdf', pattern=my_pattern)
 ```
 my_pattern = "SOME PATTERN"
 
-search_pdf('c:/my_folder_with_pdf', to_text="c:/some_path/my_text_file.txt", pattern=my_pattern, 
+search_pdf('c:/my_folder_with_pdf', to_txt="c:/some_path/my_text_file.txt", pattern=my_pattern, 
             grab_extra=25, print_on_screen=True)
 ```
 
