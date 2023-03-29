@@ -8,12 +8,13 @@ This script allows you to quickly and easily search multiple PDF files located i
 
 ### How to use
 You may submit a dictionary with keywords along with their associated values. The values must be in the form of a list: <br><br>
-<b>include</b>: must contain words<br>
-<b>exclude</b>: must not contain words<br>
-<b>keywords</b>: list of keywords<br>
+|Command|Descritpion|
+|------|-------|
+|<b>include</b>|must contain words|
+|<b>exclude</b>|must not contain words|
+|<b>keywords</b>|list of keywords|
 
-<br>
-Passing all three keys is not a requirement. You can choose to pass only one or two of the keys if that works better for you. This gives you the flexibility to customize your experience and pick the keys that are most important to you.<br><br>
+<b>Passing all three keys is not a requirement.</b> You can choose to pass only one or two of the keys if that works better for you. This gives you the flexibility to customize your experience and pick the keys that are most important to you.<br><br>
 
 ```
 params = {
@@ -25,7 +26,7 @@ params = {
 search_pdf('c:/my_folder_with_pdf', params=params)
 ```
 <br>
-Using Regular Expressions style patterns, you can pass your own unique pattern to search for specific text in a PDF. : <br><br>
+<b>Using Regular Expressions style patterns, you can pass your own unique pattern to search for specific text in a PDF: </b> <br><br>
 
 ```
 my_pattern = "(?=.*mobility).*"
@@ -34,12 +35,15 @@ search_pdf('c:/my_folder_with_pdf', pattern=my_pattern)
 ```
 
 ### Optional parameters
-<b>to_txt</b> takes a path where you want to save a text file that contains findings including file name and page on which finding is present.<br><br>
-<b>to_csv</b> takes a path where you want to save a csv file that contains findings including file name and page on which finding is present.<br><br>
-<b>to_excel</b> takes a path where you want to save an excel file that contains findings including file name and page on which finding is present.<br><br>
-<b>grab_extra</b> takes a postive integer that specifies a number of charechters before and after the finding that you want to include and add to the finding.<br><br>
-<b>print_on_screen</b> the default is True, prints result in terminal, that includes file name and path, page number where the finding is present and the finding itself.<br><br>
+|Parameter|Action|
+|------|-----|
+|<b>to_txt</b>|takes a path where you want to save a text file that contains findings including file name and page on which finding is present|
+|<b>to_csv</b>|takes a path where you want to save a csv file that contains findings including file name and page on which finding is present|
+|<b>to_excel</b>|takes a path where you want to save an excel file that contains findings including file name and page on which finding is present|
+|<b>grab_extra</b>|takes a postive integer that specifies a number of charechters before and after the finding that you want to include and add to the finding|
+|<b>print_on_screen</b>|the default is True, prints result in terminal, that includes file name and path, page number where the finding is present and the finding itself|
 
+Example:<br>
 ```
 my_pattern = "SOME PATTERN"
 
